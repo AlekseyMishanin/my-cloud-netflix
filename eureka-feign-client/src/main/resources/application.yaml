@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eureka-feign-client
+
+server:
+  port: 9060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:9050/eureka}
+    instance:
+      preferIpAddress: true
+    fetchRegistry: true

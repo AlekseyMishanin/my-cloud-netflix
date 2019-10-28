@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: zuul-client
+
+server:
+  port: 9075
+  servlet:
+    context-path: /cloud
+
+eureka:
+  client:
+    instance:
+      prefer-ip-address: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9050/eureka/
+
+zuul:
+  routes:
+    eureka-feign-client: /feign/**
+  sensitiveHeaders: Cookie, Set-Cookie
