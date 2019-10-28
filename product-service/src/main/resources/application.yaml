@@ -1,0 +1,19 @@
+server:
+  port: 8880
+
+spring:
+  application:
+    name: product-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=mytest
+    username: postgres
+    password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:9050/eureka}
+    instance:
+      preferIpAddress: true
+    fetchRegistry: false

@@ -1,0 +1,6 @@
+# Project exclude paths
+/common/target/
+/eureka-feign-client/target/
+/eureka-server/target/
+/eureka-zuul-client/target/
+/product-service/target/
